@@ -8,9 +8,13 @@ import SocketProvider from "@/components/SocketProvider";
 export default function MainLayout({ children }) {
   return (
     <ProtectedRoute>
+      {" "}
+      {/*every main component is protected  */}
       <SocketProvider>
-        <Navbar />
-        {children}
+        {" "}
+        {/* every main component  has socket access  */}
+        <Navbar /> {/*Evey main component has nav visible at top */}
+        {children} {/* Main component */}
       </SocketProvider>
     </ProtectedRoute>
   );
